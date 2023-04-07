@@ -4,6 +4,7 @@ const typescript = require("@rollup/plugin-typescript");
 const dts = require("rollup-plugin-dts").default;
 const packageJson = require("./package.json");
 const postcss = require("rollup-plugin-postcss");
+const terser = require("@rollup/plugin-terser");
 
 const config = [
   {
@@ -24,14 +25,15 @@ const config = [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      postcss()
+      postcss(),
+      terser()
     ],
   },
   {
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
-    external: [/\.css$/]
+    external: [/\.css$/],
   },
 ];
 
