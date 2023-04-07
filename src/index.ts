@@ -1,4 +1,7 @@
-import * as antd from "antd";
+import { Button } from "antd";
 export * from "./components";
+const antd = {
+  Button,
+};
 
-export { antd };
+export default antd;
