@@ -1,4 +1,2 @@
-import Select from "./Select";
-import Button from "./Button";
-
-export { Select, Button };
+export { default as Button } from './Button'
+export { default as Select } from './Select'
