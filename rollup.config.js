@@ -58,6 +58,7 @@ const packageJson = require("./package.json");
 const typescript = require("@rollup/plugin-typescript");
 const peerDepsExternal  = require('rollup-plugin-peer-deps-external');
 const dts = require("rollup-plugin-dts").default;
+const json =require("@rollup/plugin-json");
 
 const config = [
   {
@@ -77,6 +78,7 @@ const config = [
     plugins: [
       peerDepsExternal(),
       resolve(),
+      json(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       babel({
