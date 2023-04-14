@@ -1,6 +1,6 @@
 {
   "name": "newbuilder",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "基于antd的组件库",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
